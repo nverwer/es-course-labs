@@ -1,0 +1,6 @@
+/*
+  Generate some data at http://www.json-generator.com/.
+  The data should include strings, numbers, dates, and a location conforming to
+  [http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/mapping-geo-point-type.html#_input_structure].
+  Replace the content of this file with your data.
+*/
