@@ -1,1 +1,5 @@
 node_modules
+05-play/project/project/target/
+05-play/project/target/
+05-play/.*
+05-play/target/
