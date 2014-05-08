@@ -3,7 +3,7 @@
   * npm install request
 
   Generate data and put it in data.json.
-  Change the name of the index and type before you run this exercise.
+  Change the name of the index and type below, before you run this exercise.
 */
 
 var fs = require('fs');
