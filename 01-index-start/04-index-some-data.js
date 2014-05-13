@@ -13,8 +13,10 @@ var data = {
     "company": "ZOLAREX",
     "email": "wendiarmstrong@zolarex.com",
     "phone": "+1 (916) 592-3282",
-    "latitude": 17.845702,
-    "longitude": 69.974373,
+    "location": {
+      "lat": 17.845702,
+      "lon": 69.974373,
+    },
     "tags": [
         "deserunt",
         "cillum",
@@ -31,8 +33,11 @@ var indexRequest = request.post({
     body: JSON.stringify(data, null, 0)
   },
   function(error, response, result) {
-    if (!error && response.statusCode == 200) {
-      console.log(JSON.stringify(JSON.parse(result), null, 2))
+    if (error) {
+      console.log("ERROR: "+error);
+    } else {
+      console.log("Response code: "+response.statusCode);
+      console.log(JSON.stringify(JSON.parse(result), null, 2));
     }
   }
 );

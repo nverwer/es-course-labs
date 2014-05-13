@@ -1,5 +1,9 @@
 node_modules
 05-play/project/project/target/
 05-play/project/target/
-05-play/.*
 05-play/target/
+05-play/.*
+06-play-mappings/project/project/target/
+06-play-mappings/project/target/
+06-play-mappings/target/
+06-play-mappings/.*
