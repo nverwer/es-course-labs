@@ -11,7 +11,6 @@
   http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/search-uri-request.html
 */
 
-var fs = require('fs');
 var request = require('request');
 
 var url = 'http://localhost:9200/insert-your-index-name/insert-your-type-name';
