@@ -5,6 +5,7 @@
   Before you run this exercise:
   Change the name of the index and type.
   Change the fieldname and value in the query.
+  Look at the "from" and "size" parameters, set them to more sensible values.
 
   See also:
   http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/search-search.html

@@ -30,7 +30,7 @@ class EventStore(eventType: String) {
 
   }
 
-  initialize
+  initialize // when creating an EventStore.
 
   def getById(id: String): Future[Option[Event]] = esType.get[Event](id)
 
@@ -40,7 +40,7 @@ class EventStore(eventType: String) {
   def save(item: Event): Future[Unit] =
     esType.index(item) flatMap { _ => esIndex.refresh() }
 
-  def search(query: Query, size: Int, start: Int): Future[SearchResult[Event]] =
+  def search(query: Query, size: Int = 10, start: Int = 0): Future[SearchResult[Event]] =
     esType.search[Event](query.withSize(size).withFrom(start))
 
 }

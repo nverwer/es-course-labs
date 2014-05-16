@@ -1,5 +1,8 @@
 package labs
 
+import play.api.libs.concurrent.Execution.Implicits.defaultContext
+import scala.concurrent.{Await, Future}
+import scala.concurrent.duration.DurationInt
 import stores.EventStore
 
 object EventIndexer extends App {

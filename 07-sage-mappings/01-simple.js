@@ -61,3 +61,7 @@ es.index("testindex").destroy(function(err, result){
     }
   );
 });
+
+/* We are heading towards callback-hell, a.k.a. the pyramid of doom.
+ * We will change that in the next exercise.
+ */
