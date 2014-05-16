@@ -49,7 +49,7 @@ class EventStore(eventType: String, mapping: Mapping) {
   def list(size: Int): Future[Seq[Event]] =
     esType.search[Event](MatchAllQuery().withSize(size)) map {result => result.hits.map(_.source)}
 
-  def save(item: Event): Unit =
+  def save(item: Event): Future[Unit] =
     esType.index(item) flatMap { _ => esIndex.refresh() }
 
   def search(query: Query, size: Int, start: Int): Future[SearchResult[Event]] =

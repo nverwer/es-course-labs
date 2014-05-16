@@ -70,9 +70,10 @@ var query = {
 
 util.do(es_index, "exists")
 .then(function(exists){
-  return exists ? util.do(es_index, "destroy") :andthen(true);
+  return exists ? util.do(es_index, "destroy")
+                : andthen({}); // Return any value
 })
-.then(function(){return util.do(es_index, "create")})
+.then(function(){return util.do(es_index, "create", {"settings": settings, "mappings": mappings})})
 .then(function(){return util.do(es_type, "post", person1).and(util.do(es_type, "post", person2))})
 .then(function(){return util.do(es_index, "refresh")})
 .then(function(){return util.do(es_type, "find", query)})
