@@ -6,7 +6,8 @@ import scala.concurrent.duration.DurationInt
 import stores.EventStore
 
 object EventIndexer extends App {
-  val store = new EventStore("rock_festival")
+  val mapping = ??? // See models.Event.
+  val store = new EventStore("rock_festival", mapping)
   val festivals = testdata.Events.list
 
   // Add settings to the EventStore.

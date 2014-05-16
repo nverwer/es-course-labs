@@ -44,6 +44,8 @@ class EventStore(eventType: String, mapping: Mapping) {
 
   }
 
+  initialize // when creating an EventStore.
+
   def getById(id: String): Future[Option[Event]] = esType.get[Event](id)
 
   def list(size: Int): Future[Seq[Event]] =
